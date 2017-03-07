@@ -1,5 +1,9 @@
-function foo() {
-    console.error('foo')
+function b(cb) {
+    console.log('foo');
+    cb();
 }
-process.nextTick(foo);
-console.log("bar");
+
+b(function () {
+    console.log("a");
+})
+
